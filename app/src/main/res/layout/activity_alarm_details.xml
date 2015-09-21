@@ -1,0 +1,290 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AlarmDetailsActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:orientation="vertical">
+
+            <TimePicker
+                android:id="@+id/alarm_details_time_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:layout_marginLeft="16dp"
+                android:id="@+id/alarm_details_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:ems="10"
+                android:hint="@string/details_alarm_name" />
+
+            <View
+                android:id="@+id/divider1"
+                style="@style/Divider"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/alarm_details_label_repeat_weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_repeat_weekly"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <CheckBox
+                    android:id="@+id/alarm_details_repeat_weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                style="@style/Divider"/>
+
+            <LinearLayout
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:id="@+id/alarm_details_repeat_sunday"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textOn="@string/details_sunday"
+                    android:textOff="@string/details_sunday"
+                    android:background="@drawable/circular_day_toggle_button"
+                    android:gravity="center_vertical|center_horizontal"/>
+
+                <ToggleButton
+                    android:id="@+id/alarm_details_repeat_monday"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textOn="@string/details_monday"
+                    android:textOff="@string/details_monday"
+                    android:background="@drawable/circular_day_toggle_button"
+                    android:gravity="center_vertical|center_horizontal"/>
+
+                <ToggleButton
+                    android:id="@+id/alarm_details_repeat_tuesday"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textOn="@string/details_tuesday"
+                    android:textOff="@string/details_tuesday"
+                    android:background="@drawable/circular_day_toggle_button"
+                    android:gravity="center_vertical|center_horizontal"/>
+
+                <ToggleButton
+                    android:id="@+id/alarm_details_repeat_wednesday"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textOn="@string/details_wednesday"
+                    android:textOff="@string/details_wednesday"
+                    android:background="@drawable/circular_day_toggle_button"
+                    android:gravity="center_vertical|center_horizontal"/>
+
+                <ToggleButton
+                    android:id="@+id/alarm_details_repeat_thursday"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textOn="@string/details_thursday"
+                    android:textOff="@string/details_thursday"
+                    android:background="@drawable/circular_day_toggle_button"
+                    android:gravity="center_vertical|center_horizontal"/>
+
+                <ToggleButton
+                    android:id="@+id/alarm_details_repeat_friday"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="5dp"
+                    android:textOn="@string/details_friday"
+                    android:textOff="@string/details_friday"
+                    android:background="@drawable/circular_day_toggle_button"
+                    android:gravity="center_vertical|center_horizontal"/>
+
+                <ToggleButton
+                    android:id="@+id/alarm_details_repeat_saturday"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:textOn="@string/details_saturday"
+                    android:textOff="@string/details_saturday"
+                    android:background="@drawable/circular_day_toggle_button"
+                    android:gravity="center_vertical|center_horizontal"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider3"
+                style="@style/Divider"/>
+
+
+            <LinearLayout
+                android:id="@+id/alarm_ringtone_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:background="@drawable/view_touch_selector"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/alarm_label_tone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/details_alarm_tone"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/alarm_label_tone_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:text="@string/details_alarm_tone_default"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider4"
+                style="@style/Divider"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/alarm_details_label_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_vibrate"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <CheckBox
+                    android:id="@+id/alarm_details_vibrate_chk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider5"
+                style="@style/Divider"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/alarm_details_label_fade_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/details_fade_in"
+                        android:layout_marginLeft="16dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/details_fade_in_desc"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="2dp"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <CheckBox
+                    android:id="@+id/alarm_details_fade_in_chk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Save"
+            android:id="@+id/save_alarm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="Cancel"
+            android:id="@+id/cancel_alarm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

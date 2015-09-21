@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:id="@+id/timer_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/timer_donut_progress"
+                android:layout_centerInParent="true"
+                android:layout_width="250dp"
+                android:layout_height="250dp" />
+
+            <TextView
+                android:id="@+id/timer_progress_time"
+                android:layout_marginTop="15dp"
+                android:textSize="45sp"
+                android:text="0:00:00"
+                android:background="@color/light_grey"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timer_progress_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/timer_screen_play_btn"
+                android:background="@drawable/play_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:id="@+id/timer_screen_pause_btn"
+                android:background="@drawable/pause_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:id="@+id/timer_screen_refresh_btn"
+                android:background="@drawable/refresh_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/timer_screen_pause_btn"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/timer_screen_delete_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/delete_icon"
+        android:layout_margin="8dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+</RelativeLayout>

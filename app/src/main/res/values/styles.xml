@@ -1,0 +1,30 @@
+<resources>
+
+     Base application theme.
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarTabStyle">@style/MyActionBarTabs</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyActionBarTabs"
+        parent="@android:style/Widget.Holo.Light">
+        <!-- tab indicator -->
+        <item name="android:background">@drawable/actionbar_tab_indicator</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="ActionButtonStyle"
+        parent="@android:style/Theme.Holo.Light">
+        <item name="android:minWidth">5dp</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+
+
+</resources>

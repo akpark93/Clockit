@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/timer_list_item_time"
+        android:textSize="30sp"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="20dp"/>
+
+    <Button
+        android:background="@drawable/play_icon"
+        android:id="@+id/timer_list_play_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@+id/timer_list_item_time"
+        android:layout_centerVertical="true"
+        android:focusable="false"/>
+
+    <Button
+        android:background="@drawable/pause_icon"
+        android:id="@+id/timer_list_pause_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@+id/timer_list_item_time"
+        android:layout_centerVertical="true"
+        android:focusable="false"/>
+
+    <ProgressBar
+        android:id="@+id/hourglass_icon_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/hourglass_progress_icon"
+        android:padding="15dp"/>
+
+    <ImageView
+        android:id="@+id/hourglass_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/hourglass_icon"
+        android:padding="16dp"/>
+
+</RelativeLayout>
